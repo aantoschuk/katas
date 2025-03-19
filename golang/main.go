@@ -3,12 +3,12 @@ package main
 import (
 	"fmt"
 
-	dynamic "example.com/m/dynamic_programming"
+	math_package "example.com/m/math"
 )
 
 func main() {
-	nums := []int{7, 6, 4, 3, 1}
+	nums := []int{1, 2, 3, -4, -5}
 
-	res := dynamic.StocksProfit(nums)
+	res := math_package.MathEngine(nums)
 	fmt.Println(res)
 }
