@@ -3,12 +3,12 @@ package main
 import (
 	"fmt"
 
-	math_package "example.com/m/math"
+	hashtable "example.com/m/hash_table"
 )
 
 func main() {
-	nums := []int{1, 2, 3, -4, -5}
+	nums := []int{1, 2, 2, 1}
 
-	res := math_package.MathEngine(nums)
+	res := hashtable.CountKDifference(nums, 1)
 	fmt.Println(res)
 }
