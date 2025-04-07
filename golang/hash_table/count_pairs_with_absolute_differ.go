@@ -1,8 +1,8 @@
-// Given an integer array and an integer k, return the number of pairs (i, j),  
+// Given an integer array and an integer k, return the number of pairs (i, j),
 // such that |i - j| == k
 package hashtable
 
-// Basically check every pair and do i - j == k 
+// Basically check every pair and do i - j == k
 // or in other words i +- k == j
 func CountKDifference(nums []int, k int) int {
 	m := make(map[int]int)
