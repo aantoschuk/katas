@@ -3,12 +3,12 @@ package main
 import (
 	"fmt"
 
-	hashtable "example.com/m/hash_table"
+	"example.com/m/arrays"
 )
 
 func main() {
-	nums := []int{1, 2, 2, 1}
+	nums := []int{5, 2, 5, 4, 5}
 
-	res := hashtable.CountKDifference(nums, 1)
+	res := arrays.MinimumOperation(nums, 2)
 	fmt.Println(res)
 }
