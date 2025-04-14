@@ -7,8 +7,8 @@ import (
 )
 
 func main() {
-	nums := []int{5, 2, 5, 4, 5}
+	nums := []int{3, 0, 1, 1, 9, 7}
 
-	res := arrays.MinimumOperation(nums, 2)
+	res := arrays.CountGoodTriplets(nums, 7, 2, 3)
 	fmt.Println(res)
 }
