@@ -7,7 +7,7 @@
  * Return the minimum number of moves required to move each student to a seat such that no two students are in the same seat.
  * Note that there may be multiple seats or students in the same position at the beginning.
  *
- * Gredy algorightm.
+ * Greedy algorightm.
  *
  * As we need to actually return only numbers and no need to track or keep positions,
  * we can freely sort arrays.
@@ -15,12 +15,12 @@
  * And then find the difference between students and seats
  * by choosing optimap solution, which why it is actually greedy
  *
- *
- * also, it can be solved with
- * count += Math.abs(seats[i] - students[i])
- * instead of if, but i solved this way, so be it.
+ * initialy I  solved it using first variant, but after some time i re-doit using Math.abs
  *
  * as single for is O(n) but due to sort it was O(n log n) = O(n log n) + O(n)
+ *
+ * There is a very small diff between thoose two. Use second all the time,
+ * but if speed is the concern and need more control - then first variant is way to go
  * */
 
 const minMovesToSeat = (seats: number[], students: number[]) => {
@@ -36,5 +36,18 @@ const minMovesToSeat = (seats: number[], students: number[]) => {
       count += seats[i] - students[i];
     }
   }
+  return count;
+};
+
+const minMovesToSeat2 = (seats: number[], students: number[]) => {
+  seats.sort((a, b) => a - b);
+  students.sort((a, b) => a - b);
+
+  // count how many moves
+  let count = 0;
+  for (let i = 0; i < seats.length; i++) {
+    count += Math.abs(seats[i] - students[i]);
+  }
+
   return count;
 };
