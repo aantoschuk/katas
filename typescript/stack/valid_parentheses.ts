@@ -33,4 +33,4 @@ const isPair = (last: string, cur: string) => {
     (last === "{" && cur === "}") ||
     (last === "[" && cur === "]")
   );
-};
+}
