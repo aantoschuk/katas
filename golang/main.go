@@ -2,13 +2,12 @@ package main
 
 import (
 	"fmt"
-
-	"example.com/m/arrays"
 )
 
 func main() {
-	nums := []int{3, 0, 1, 1, 9, 7}
+	array := []int{1, 3, 5, 7, 9}
+	value := 8
 
-	res := arrays.CountGoodTriplets(nums, 7, 2, 3)
-	fmt.Println(res)
+	res, steps := binarySearch(array, value)
+	fmt.Println(res, steps)
 }

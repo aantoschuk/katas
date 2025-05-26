@@ -43,3 +43,5 @@ const accum = (s: string) =>
   [...s]
     .map((ch, i) => ch.toUpperCase() + ch.toLowerCase().repeat(i))
     .join("-");
+
+
